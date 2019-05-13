@@ -4,10 +4,10 @@ blog_subtitle: Recent content in URSSI Blog on Official Website of the US Resear
   Software Sustaiability Institute
 blog_title: URSSI Blog on Official Website of the US Research Software Sustaiability
   Institute
-blog_url: http://urssi.us/blog/
+blog_url: http-//urssi.us/blog/
 date: '2018-09-06 17:27:06'
 layout: post
-original_url: http://urssi.us/blog/2018/09/06/it-takes-more-than-a-village-to-raise-good-research-software/
+original_url: http-//urssi.us/blog/2018/09/06/it-takes-more-than-a-village-to-raise-good-research-software/
 title: It takes more than a village to raise good research software
 ---
 

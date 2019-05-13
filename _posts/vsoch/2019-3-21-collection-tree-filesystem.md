@@ -1,12 +1,12 @@
 ---
+author: Vanessasaurus
+blog_subtitle: dinosaurs, programming, and parsnips
+blog_title: VanessaSaurus
+blog_url: https-//vsoch.github.io//
 date: '2019-03-21 07:30:00'
 layout: post
-author: Vanessa Sochat
+original_url: https-//vsoch.github.io//2019/collection-tree-filesystem/
 title: Collection Tree Filesystems
-original_url: https://vsoch.github.io//2019/collection-tree-filesystem/
-blog_title: VanessaSaurus
-blog_subtitle: dinosaurs, programming, and parsnips
-blog_url: https://vsoch.github.io
 ---
 
 <p>The <a href="https://singularityhub.github.io/container-tree/">containertree</a> software

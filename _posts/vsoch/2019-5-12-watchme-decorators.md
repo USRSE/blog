@@ -2,10 +2,10 @@
 author: Vanessasaurus
 blog_subtitle: dinosaurs, programming, and parsnips
 blog_title: VanessaSaurus
-blog_url: https://vsoch.github.io//
+blog_url: https-//vsoch.github.io//
 date: '2019-05-12 06:30:00'
 layout: post
-original_url: https://vsoch.github.io//2019/watchme-decorators/
+original_url: https-//vsoch.github.io//2019/watchme-decorators/
 title: Watchme Process Monitoring
 ---
 
