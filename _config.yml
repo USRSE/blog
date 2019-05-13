@@ -27,7 +27,7 @@ defaults:
 
 # Build settings
 permalink   : /:year/:title/
-exclude: ["_site", "vendor"]
+exclude: ["_site", "vendor", ".circleci"]
 
 markdown:          kramdown
 paginate:          5
