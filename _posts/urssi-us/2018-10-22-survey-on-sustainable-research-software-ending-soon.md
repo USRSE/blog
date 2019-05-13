@@ -4,11 +4,11 @@ blog_subtitle: Recent content in URSSI Blog on Official Website of the US Resear
   Software Sustaiability Institute
 blog_title: URSSI Blog on Official Website of the US Research Software Sustaiability
   Institute
-blog_url: http-//urssi.us/blog/
+blog_url: http://urssi.us/blog/
 category: urssi-us
 date: '2018-10-22 22:31:10'
 layout: post
-original_url: http-//urssi.us/blog/2018/10/22/survey-on-sustainable-research-software-ending-soon/
+original_url: http://urssi.us/blog/2018/10/22/survey-on-sustainable-research-software-ending-soon/
 title: Survey on sustainable research software ending soon
 ---
 

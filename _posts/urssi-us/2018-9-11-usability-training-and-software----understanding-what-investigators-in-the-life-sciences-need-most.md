@@ -4,11 +4,11 @@ blog_subtitle: Recent content in URSSI Blog on Official Website of the US Resear
   Software Sustaiability Institute
 blog_title: URSSI Blog on Official Website of the US Research Software Sustaiability
   Institute
-blog_url: http-//urssi.us/blog/
+blog_url: http://urssi.us/blog/
 category: urssi-us
 date: '2018-09-11 17:06:26'
 layout: post
-original_url: http-//urssi.us/blog/2018/09/11/usability-training-and-software----understanding-what-investigators-in-the-life-sciences-need-most/
+original_url: http://urssi.us/blog/2018/09/11/usability-training-and-software----understanding-what-investigators-in-the-life-sciences-need-most/
 title: Usability, Training, and Software -- Understanding what Investigators in the
   Life Sciences Need Most
 ---

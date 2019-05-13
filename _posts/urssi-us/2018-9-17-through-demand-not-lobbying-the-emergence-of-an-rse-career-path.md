@@ -4,11 +4,11 @@ blog_subtitle: Recent content in URSSI Blog on Official Website of the US Resear
   Software Sustaiability Institute
 blog_title: URSSI Blog on Official Website of the US Research Software Sustaiability
   Institute
-blog_url: http-//urssi.us/blog/
+blog_url: http://urssi.us/blog/
 category: urssi-us
 date: '2018-09-17 12:06:16'
 layout: post
-original_url: http-//urssi.us/blog/2018/09/17/through-demand-not-lobbying-the-emergence-of-an-rse-career-path/
+original_url: http://urssi.us/blog/2018/09/17/through-demand-not-lobbying-the-emergence-of-an-rse-career-path/
 title: Through demand, not lobbying- the emergence of an RSE career path
 ---
 

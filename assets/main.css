@@ -55,6 +55,10 @@ blockquote {
   background: #0085A1;
   text-shadow: none; }
 
+img {
+  max-width: 100% !important;
+}
+
 img::selection {
   color: #fff;
   background: transparent; }

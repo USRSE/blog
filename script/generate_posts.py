@@ -117,7 +117,8 @@ def generate_post(entry, author, feed):
     post.metadata['category'] = author['tag']
 
     # Remove :
-    for key, value in post.metadata.items():
+    for key in ['title', 'blog_subtitle', 'author']:
+        value = post.metadata[key]
         if ":" in value:
             post.metadata[key] = post.metadata[key].replace(':', '-')
 

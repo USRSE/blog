@@ -4,11 +4,11 @@ blog_subtitle: Recent content in URSSI Blog on Official Website of the US Resear
   Software Sustaiability Institute
 blog_title: URSSI Blog on Official Website of the US Research Software Sustaiability
   Institute
-blog_url: http-//urssi.us/blog/
+blog_url: http://urssi.us/blog/
 category: urssi-us
 date: '2018-12-03 12:23:02'
 layout: post
-original_url: http-//urssi.us/blog/2018/12/03/credit-and-recognition-for-research-software-current-state-of-practice-and-outlook/
+original_url: http://urssi.us/blog/2018/12/03/credit-and-recognition-for-research-software-current-state-of-practice-and-outlook/
 title: Credit and recognition for research software- Current state of practice and
   outlook
 ---
