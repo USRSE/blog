@@ -2,17 +2,55 @@ version: 2.1
 
 workflows:
   version: 2
-  test:
+
+  # The build workflow will build a preview for the site, intended for PRs
+  build:
     jobs:
-      - build-python-3:
+      - build-site:
           filters:
             branches:
               ignore: master
+
+  # The build nightly has a content (below) that indicates deployment
+  build-nightly:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - build-site:
+          context: trigger-context
+          filters:
+            branches:
+              only:
+                - master
 
 install: &install
   name: install dependencies for build
   command: |
      $HOME/conda/bin/pip install -r ~/repo/.circleci/requirements.txt
+
+deploy: &deploy
+  name: Deploy back to GitHub master, only in the case that CIRCLECI_TRIGGER is found
+  command: |
+    # Only deploy if the CIRCLECI_TRIGGER is found in the environment
+    if [ -z "$CIRCLECI_TRIGGER" ]; then
+        echo "CIRCLECI_TRIGGER not found, not nightly build, will not deploy."
+        exit 0
+    else
+        echo "Detected trigger, updating GitHub pages!"    
+        git config user.name "${CIRCLE_USERNAME}"
+        git config user.email "${CIRCLE_USERNAME}@users.noreply.github.com"
+        git checkout master
+        git pull origin master
+        git add ~/repo/_posts/*
+        git commit -m 'Automated deployment to Github Pages' --allow-empty
+        git push origin master
+    fi      
+
 
 install_python_3: &install_python_3
   name: install Python 3.5 dependencies
@@ -44,7 +82,7 @@ build_jekyll: &build_jekyll
         bundle exec jekyll build
 
 jobs:
-  build-python-3:
+  build-site:
     docker:
       - image: circleci/ruby:2.4.1
     working_directory: ~/repo
@@ -78,3 +116,4 @@ jobs:
       - store_artifacts:
           path: ~/repo/_site
           destination: blog
+      - run: *deploy
