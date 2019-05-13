@@ -82,7 +82,7 @@ def parse_feeds(authors, output_dir):
     template_file = get_template()
 
     output_dir = os.path.abspath(output_dir)
-    elif not os.path.exists(output_dir):
+    if not os.path.exists(output_dir):
         print("Output directory %s does not exist." % output_dir)
         sys.exit(1)
 
@@ -129,7 +129,7 @@ def generate_post(entry, author, feed):
     return post
 
 
-def get_markdown_file(author_folder, entry)
+def get_markdown_file(author_folder, entry):
     '''return the path to a markdown file in an author folder, where the
        format should be: YYYY-MM-DD-title.md. If the file exists, we won't
        write it again.
