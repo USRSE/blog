@@ -26,12 +26,13 @@ defaults:
 
 
 # Build settings
-permalink   : /:year/:title/
+permalink   : /:year/:categories/:title/
 exclude: ["_site", "vendor", ".circleci"]
 
 markdown:          kramdown
+comments: true
 paginate:          5
-paginate_path:     "/posts/page:num/"
+paginate_path: "/posts/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate

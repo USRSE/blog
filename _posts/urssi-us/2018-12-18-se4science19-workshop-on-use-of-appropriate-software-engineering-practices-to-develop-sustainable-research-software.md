@@ -5,6 +5,7 @@ blog_subtitle: Recent content in URSSI Blog on Official Website of the US Resear
 blog_title: URSSI Blog on Official Website of the US Research Software Sustaiability
   Institute
 blog_url: http-//urssi.us/blog/
+category: urssi-us
 date: '2018-12-18 21:57:36'
 layout: post
 original_url: http-//urssi.us/blog/2018/12/18/se4science19-workshop-on-use-of-appropriate-software-engineering-practices-to-develop-sustainable-research-software/

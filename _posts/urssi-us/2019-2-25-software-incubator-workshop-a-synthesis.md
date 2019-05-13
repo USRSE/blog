@@ -5,6 +5,7 @@ blog_subtitle: Recent content in URSSI Blog on Official Website of the US Resear
 blog_title: URSSI Blog on Official Website of the US Research Software Sustaiability
   Institute
 blog_url: http-//urssi.us/blog/
+category: urssi-us
 date: '2019-02-25 23:44:32'
 layout: post
 original_url: http-//urssi.us/blog/2019/02/25/software-incubator-workshop-a-synthesis/

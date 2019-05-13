@@ -114,7 +114,8 @@ def generate_post(entry, author, feed):
     post.metadata['blog_title'] = feed['feed'].get('title', '')
     post.metadata['blog_subtitle'] = feed['feed'].get('subtitle', '')
     post.metadata['blog_url'] = feed['feed'].get('link', '')
-    
+    post.metadata['category'] = author['tag']
+
     # Remove :
     for key, value in post.metadata.items():
         if ":" in value:

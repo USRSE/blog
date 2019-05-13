@@ -5,6 +5,7 @@ blog_subtitle: Recent content in URSSI Blog on Official Website of the US Resear
 blog_title: URSSI Blog on Official Website of the US Research Software Sustaiability
   Institute
 blog_url: http-//urssi.us/blog/
+category: urssi-us
 date: '2019-02-06 20:44:32'
 layout: post
 original_url: http-//urssi.us/blog/2019/02/06/the-molecular-sciences-software-institute-the-time-is-ripe-for-change/

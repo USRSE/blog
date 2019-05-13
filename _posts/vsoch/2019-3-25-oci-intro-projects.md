@@ -3,6 +3,7 @@ author: Vanessasaurus
 blog_subtitle: dinosaurs, programming, and parsnips
 blog_title: VanessaSaurus
 blog_url: https-//vsoch.github.io//
+category: vsoch
 date: '2019-03-25 02:15:00'
 layout: post
 original_url: https-//vsoch.github.io//2019/oci-intro-projects/

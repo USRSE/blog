@@ -3,6 +3,7 @@ author: Vanessasaurus
 blog_subtitle: dinosaurs, programming, and parsnips
 blog_title: VanessaSaurus
 blog_url: https-//vsoch.github.io//
+category: vsoch
 date: '2019-04-13 12:34:00'
 layout: post
 original_url: https-//vsoch.github.io//2019/watchme-git-hook/

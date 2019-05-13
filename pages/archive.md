@@ -1,5 +1,7 @@
 ---
-description: "Archive"
+layout: page
+title: Archive
+description: A collection of posts, organized by year
 permalink: /archive/
 ---
 
