@@ -2,10 +2,11 @@
 author: Vanessasaurus
 blog_subtitle: dinosaurs, programming, and parsnips
 blog_title: VanessaSaurus
-blog_url: https-//vsoch.github.io//
+blog_url: https://vsoch.github.io//
+category: vsoch
 date: '2019-04-09 04:15:00'
 layout: post
-original_url: https-//vsoch.github.io//2019/oci-how-to-contribute/
+original_url: https://vsoch.github.io//2019/oci-how-to-contribute/
 title: OCI Series Part III- How to Contribute
 ---
 

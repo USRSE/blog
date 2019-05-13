@@ -1,11 +1,11 @@
-title:             US Research Software Engineers
-description:       Shared experiences and stories
-author:            USRSE
-baseurl:           "/blog"
-url:               "https://usrse.github.io"
+title: US Research Software Engineers
+description: Shared experiences and stories
+author: USRSE
+baseurl: "/blog"
+url: "https://usrse.github.io"
 
 # Social Profiles
-twitter_username:  usrse
+# twitter_username:  usrse
 github_username:   usrse
 
 # Paths
@@ -26,12 +26,13 @@ defaults:
 
 
 # Build settings
-permalink   : /:year/:title/
-exclude: ["_site", "vendor"]
+permalink   : /:year/:categories/:title/
+exclude: ["_site", "vendor", ".circleci"]
 
 markdown:          kramdown
+comments: true
 paginate:          5
-paginate_path:     "/posts/page:num/"
+paginate_path: "/posts/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate

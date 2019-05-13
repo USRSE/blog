@@ -4,10 +4,11 @@ blog_subtitle: Recent content in URSSI Blog on Official Website of the US Resear
   Software Sustaiability Institute
 blog_title: URSSI Blog on Official Website of the US Research Software Sustaiability
   Institute
-blog_url: http-//urssi.us/blog/
+blog_url: http://urssi.us/blog/
+category: urssi-us
 date: '2019-03-24 23:17:22'
 layout: post
-original_url: http-//urssi.us/blog/2019/03/24/report-from-urssi-workshop-on-software-credit-citation-and-metrics/
+original_url: http://urssi.us/blog/2019/03/24/report-from-urssi-workshop-on-software-credit-citation-and-metrics/
 title: Report from URSSI workshop on software credit, citation, and metrics
 ---
 

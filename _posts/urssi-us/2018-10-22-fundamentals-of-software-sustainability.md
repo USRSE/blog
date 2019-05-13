@@ -4,10 +4,11 @@ blog_subtitle: Recent content in URSSI Blog on Official Website of the US Resear
   Software Sustaiability Institute
 blog_title: URSSI Blog on Official Website of the US Research Software Sustaiability
   Institute
-blog_url: http-//urssi.us/blog/
+blog_url: http://urssi.us/blog/
+category: urssi-us
 date: '2018-10-22 14:53:12'
 layout: post
-original_url: http-//urssi.us/blog/2018/10/22/fundamentals-of-software-sustainability/
+original_url: http://urssi.us/blog/2018/10/22/fundamentals-of-software-sustainability/
 title: Fundamentals of Software Sustainability
 ---
 

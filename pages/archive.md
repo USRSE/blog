@@ -1,5 +1,7 @@
 ---
-description: "Archive"
+layout: page
+title: Archive
+description: A collection of posts, organized by year
 permalink: /archive/
 ---
 
@@ -13,7 +15,7 @@ permalink: /archive/
            <ul>
            {% assign myDate = currentDate %}
        {% endif %}
-       <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}"><span>{{ post.date | date: "%B %-d, %Y" }}</span> - {{ post.title }}</a></li>
+       <li><a href="{{ site.baseurl }}{{ post.url }}"><span>{{ post.date | date: "%B %-d, %Y" }}</span> - {{ post.title }}</a></li>
        {% if forloop.last %}</ul>{% endif %}
    {% endfor %}
 </div>
