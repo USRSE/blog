@@ -42,6 +42,30 @@ To develop the site, clone the repository and then build with jekyll:
 bundle exec jekyll serve
 ```
 
+You can also run the script to generate posts locally, if you choose.
+
+```bash
+cd script
+
+python generate_posts.py 
+usage: generate_posts.py [-o OUTPUT] authors
+
+Authors Parser
+
+positional arguments:
+  authors               the authors.yml file.
+
+optional arguments:
+  -o OUTPUT, --output OUTPUT
+                        The output folder to write posts.
+```
+
+This is how the posts are generated in the continuous integration setup:
+
+```bash
+python generate_posts.py ../_data/authors.yml --output ../_posts/
+```
+
 ### Important Notes
 
 The "posts" page under the [posts](posts) folder is intentionally separate from

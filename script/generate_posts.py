@@ -22,10 +22,6 @@ def get_parser():
                                 formatter_class=argparse.RawTextHelpFormatter,
                                 add_help=False)
 
-    parser.add_argument('--entrypoint', dest="entrypoint",
-                         help="define custom entry point and prevent discovery", 
-                         default=None, type=str)
-
     parser.add_argument("authors", nargs=1,
                          help="the authors.yml file.", 
                          type=str)
@@ -77,9 +73,6 @@ def parse_feeds(authors, output_dir):
     if output_dir == None:
         print("Output directory must be defined.")
         sys.exit(1)
-
-    # Ensure the template file exists
-    template_file = get_template()
 
     output_dir = os.path.abspath(output_dir)
     if not os.path.exists(output_dir):
@@ -199,7 +192,7 @@ def main():
         sys.exit(0)
         
     # Read in the authors file, a list of authors and metadata
-    authors = read_authors(args.authors)
+    authors = read_authors(args.authors[0])
 
     # Ensure data file is valid
     if not validate_authors(authors):
