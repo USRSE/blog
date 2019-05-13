@@ -4,10 +4,10 @@ blog_subtitle: Recent content in URSSI Blog on Official Website of the US Resear
   Software Sustaiability Institute
 blog_title: URSSI Blog on Official Website of the US Research Software Sustaiability
   Institute
-blog_url: http://urssi.us/blog/
+blog_url: http-//urssi.us/blog/
 date: '2019-04-16 14:30:28'
 layout: post
-original_url: http://urssi.us/blog/2019/04/16/why-research-software-engineers/
+original_url: http-//urssi.us/blog/2019/04/16/why-research-software-engineers/
 title: Why Research Software Engineers?
 ---
 

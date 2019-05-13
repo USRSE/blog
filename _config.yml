@@ -1,8 +1,8 @@
-title:             US Research Software Engineers
-description:       Shared experiences and stories
-author:            USRSE
-baseurl:           "/blog"
-url:               "https://usrse.github.io"
+title: US Research Software Engineers
+description: Shared experiences and stories
+author: USRSE
+baseurl: "/blog"
+url: "https://usrse.github.io"
 
 # Social Profiles
 twitter_username:  usrse

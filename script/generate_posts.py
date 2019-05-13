@@ -107,13 +107,18 @@ def generate_post(entry, author, feed):
     '''generate a post, including content and front end matter, from an entry.
     '''
     post = frontmatter.Post(entry['summary'])
-    post.metadata['original_url'] = entry.get('link')
-    post.metadata['title'] = entry.get('title')   
+    post.metadata['original_url'] = entry.get('link', '')
+    post.metadata['title'] = entry.get('title', '')   
     post.metadata['layout'] = 'post'
     post.metadata['author'] = author.get('name', author['tag'])
-    post.metadata['blog_title'] = feed['feed'].get('title')
-    post.metadata['blog_subtitle'] = feed['feed'].get('subtitle')
-    post.metadata['blog_url'] = feed['feed'].get('link')
+    post.metadata['blog_title'] = feed['feed'].get('title', '')
+    post.metadata['blog_subtitle'] = feed['feed'].get('subtitle', '')
+    post.metadata['blog_url'] = feed['feed'].get('link', '')
+    
+    # Remove :
+    for key, value in post.metadata.items():
+        if ":" in value:
+            post.metadata[key] = post.metadata[key].replace(':', '-')
 
     # Convert the time.struct into a datetime object
     # 2017-10-26 23:45:13 -0400
