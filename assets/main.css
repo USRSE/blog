@@ -70,7 +70,7 @@ img::-moz-selection {
 #mainNav {
   position: absolute;
   border-bottom: 1px solid #e9ecef;
-  background-color: white;
+  background-color: #e7e7e7 !important;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   #mainNav .navbar-brand {
     font-weight: 800;
@@ -120,7 +120,7 @@ img::-moz-selection {
         -moz-transition: -moz-transform 0.2s;
         transition: transform 0.2s;
         border-bottom: 1px solid white;
-        background-color: #2196F3; }
+        background-color: #e7e7e7; }
         #mainNav.is-fixed .navbar-brand {
           color: white; }
           #mainNav.is-fixed .navbar-brand:focus, #mainNav.is-fixed .navbar-brand:hover {
