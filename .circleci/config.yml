@@ -41,7 +41,8 @@ deploy: &deploy
         echo "CIRCLECI_TRIGGER not found, not nightly build, will not deploy."
         exit 0
     else
-        echo "Detected trigger, updating GitHub pages!"    
+        echo "Detected trigger, updating GitHub pages!"
+        git branch
         git config user.name "${CIRCLE_USERNAME}"
         git config user.email "${CIRCLE_USERNAME}@users.noreply.github.com"
         git checkout master
@@ -49,6 +50,7 @@ deploy: &deploy
         git add ~/repo/_posts/*
         git commit -m 'Automated deployment to Github Pages' --allow-empty
         git push origin master
+        echo $?
     fi      
 
 
@@ -75,7 +77,7 @@ build_jekyll: &build_jekyll
     name: Jekyll Build
     command: |              
         echo "Building RSE Blog for Preview"
-        mv ~/repo/.circleci/circle_urls.sh ~/repo/circle_urls.sh
+        cp ~/repo/.circleci/circle_urls.sh ~/repo/circle_urls.sh
         cd ~/repo
         chmod u+x circle_urls.sh
         bash circle_urls.sh              

@@ -30,6 +30,14 @@ as markdown files, with the author tag corresponding to the folder name in [_pos
 If the post is already included, it is skipped over. This is a reasonable task to do,
 because typically feeds only provide the 10 (or a small number) of latest posts.
 
+If you look at the [.circleci/config.yml](.circleci/config.yml) you'll notice that
+this works by way of an environment variable, `CIRCLECI_TRIGGER`. This is added as
+a build context to the workflow that runs nightly, and indicates that a build
+and deploy is desired. Another important note is that the environment during the 
+trigger is not the same as when triggered by a user (via pull request). For example,
+`CIRCLE_USERNAME`, which is normally set, is undefined for the nightly trigger.
+For this reason, we also define this in the context.
+
 The reason this is set up to run with continuous integration is so that the site
 is regularly updated without human intervention. In the case that there is an error,
 the maintainers are notified.
