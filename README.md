@@ -10,7 +10,7 @@ and experiences.
 
 An RSE or related group that has a blog, podcast, or similar feed can add their
 metadata to the [authors.yml](_data/authors.yml) file. Here is an example
-of what we collect:
+of the required fields that we collect:
 
 ```yaml
 - name: "US Research Software Engineer Community"
@@ -21,6 +21,21 @@ of what we collect:
 
 The tag must be unique (and this is tested), and the feed should be a format
 parseable by [feedparser](https://pythonhosted.org/feedparser/) (most are). 
+
+Optionally, if you want to appear in the USRSE map, you can provide an additional
+headshot (a link to a profile or other picture to represent yourself) and a coordinate
+(latitude and longitude):
+
+```yaml
+...
+  feed: http://myblog.com/feed.xml
+  image: https://www.path.com/to/your/headshot.png
+  coord: [6.41010, 50.90680]
+```
+
+The image is not required. If you leave it out, a template will be used.
+See the [authors.yml](_data/authors.yml) for more examples.
+
 
 ### 2. Generate Posts
 
