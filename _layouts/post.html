@@ -31,7 +31,7 @@ layout: default
       <div class="col-lg-8 col-md-10 mx-auto">
 
         <p class="alert alert-primary">
-        This is a crosspost from <a href="{{ page.blog_url }}">{{ page.blog_title }}</a>, {{ page.blog_subtitle }}. 
+        This is a crosspost from <a href="{{ page.blog_url }}">{{ page.blog_title }}</a>{% if page.blog_subtitle %}, {{ page.blog_subtitle }}{% endif %}. 
         See the original post <a href="{{ page.original_url }}">here</a>.</p>
         </a>
 

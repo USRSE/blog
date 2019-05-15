@@ -8,5 +8,10 @@
   url: http://urssi.us/ 
 - name: "Vanessasaurus"
   tag: "vsoch"
-  feed: https://vsoch.github.io/feed.xml
+  feed: https://vsoch.github.io/usrse-feed.xml
   url: https://vsoch.github.io/
+- name: "Daniel S. Katz's blog"
+  tag: "dsk"
+  feed: https://danielskatzblog.wordpress.com/category/RSE/feed/
+  url: https://danielskatzblog.wordpress.com/
+  
