@@ -30,6 +30,10 @@ def get_parser():
                         default=None, dest="output",
                         help="The output folder to write posts.")
 
+    parser.add_argument("--test", 
+                        default=False, dest="test",
+                        action='store_true',
+                        help="Test generation only (show files to be created)")
     return parser
 
 
@@ -61,7 +65,7 @@ def validate_authors(authors):
     return valid
 
 
-def parse_feeds(authors, output_dir):
+def parse_feeds(authors, output_dir, test=False):
     '''read in the list of authors, parse feeds and save results to a
        specified output directory.
  
@@ -69,6 +73,7 @@ def parse_feeds(authors, output_dir):
        ==========
        authors: a list of authors, read in from an authors.yml
        output_dir: the output directory to write markdown posts to.
+       test: don't write any files, only test generate
     '''
     if output_dir == None:
         print("Output directory must be defined.")
@@ -84,8 +89,11 @@ def parse_feeds(authors, output_dir):
         # Create output folder
         author_folder = os.path.join(output_dir, author['tag'])
         if not os.path.exists(author_folder):
-            print("Creating new author folder %s" % author_folder)
-            os.mkdir(author_folder)
+            if test is False:
+                print("Creating new author folder %s" % author_folder)
+                os.mkdir(author_folder)
+            else:
+                print("[TEST] new author folder %s" % author_folder)
 
         # Parse the feed, each entry is written to file based on title
         feed = feedparser.parse(author['feed'])
@@ -95,12 +103,15 @@ def parse_feeds(authors, output_dir):
 
             # Write the file if it doesn't exist
             if not os.path.exists(markdown):
+
                 print('Preparing new post: %s' % markdown)
                 post = generate_post(entry, author, feed)
 
-                # Write to file
-                with open(markdown, 'w') as filey: 
-                    filey.write(frontmatter.dumps(post))
+                if test is False:
+
+                    # Write to file
+                    with open(markdown, 'w') as filey: 
+                        filey.write(frontmatter.dumps(post))
 
 
 def generate_post(entry, author, feed):
@@ -145,6 +156,9 @@ def get_markdown_file(author_folder, entry):
 
     # The id is the last part of the url, lowercase
     title = [x for x in entry['id'].split('/') if x][-1].lower()
+
+    # Replace any variable names (? in wordpress) with -
+    title = title.replace('?', '')
     filename = '%s-%s-%s-%s.md' %(year, month, day, title)
 
     # The output markdown name is consistent
@@ -206,7 +220,7 @@ def main():
         print("Authors file %s is not valid." % authors)
 
     # Generate outputs based on authors
-    parse_feeds(authors, args.output)
+    parse_feeds(authors, args.output, args.test)
 
 
 if __name__ == '__main__':
