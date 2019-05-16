@@ -10,7 +10,7 @@ and experiences.
 
 An RSE or related group that has a blog, podcast, or similar feed can add their
 metadata to the [authors.yml](_data/authors.yml) file. Here is an example
-of what we collect:
+of the required fields that we collect:
 
 ```yaml
 - name: "US Research Software Engineer Community"
@@ -34,6 +34,75 @@ Once you've added your feed, it's recommended to test generate posts to ensure
 that it's parsed correctly. This is done during the continuous integration,
 but you can also do it locally (see below).
 
+## How do I update the map?
+
+If you have already added yourself as an author, see the first bullet below. If you
+want to add yourself and are not in the authors.yml, *or* if you want to add a group, 
+see the second bullet.
+
+### 1. Add Yourself to the Map
+
+If you want to appear in the USRSE map *and you've already added yourself
+as an author*, you can provide an additional headshot or avatar (a link to a 
+profile or other picture to represent yourself) and a coordinate
+(latitude and longitude) to the authors.yml file. If you want to include your 
+group or institution, add that too (not required):
+
+```yaml
+...
+  feed: http://myblog.com/feed.xml
+  image: https://www.path.com/to/your/headshot.png
+  coord: [6.41010, 50.90680]
+  institution: Stanford University Research Computing Center
+```
+
+> How do I find a latitude and longitude?
+
+You can actually look it up on [Google Maps](http://maps.google.com), and a more direct approach
+is to use [https://www.latlong.net/](https://www.latlong.net/) and enter
+your location by name.
+
+> What if I don't have an image, or don't want to include one?
+
+The image is not required. If you leave it out, a template will be used.
+See the [authors.yml](_data/authors.yml) for more examples.
+
+> What about my group?
+
+You don't need to include that either, if it doesn't work for you.
+
+### 2. Add your Group/Yourself to the Map
+
+If you belong to a group of Research Software Engineers (hooray!), or want
+to add yourself *without contributing to the feed* you can do so by adding
+an entry to the [_data/map.yml](_data/map.yml) file. Specifically, an entire
+should include a name, institution, url, type, and coordinate. The name could be an individual,
+or the name of a group. If you are adding yourself as an individual, set the
+type to be "person." If you are adding a group, set the type to be "group."
+Here is an example:
+
+```yaml
+- name: "Stanford Research Computing Center"
+  url: https://srcc.stanford.edu
+  coords: [37.424107, -122.166077]
+  institution: Stanford University
+  type: group
+```
+
+You are also free to add an image parameter, in case your group has a logo.
+And of course this could apply to an individual too.
+
+### 3. Test your Entry
+
+Other than previewing the site and ensuring that the coordinate shows up in the
+correct spot, you can run unit testing locally to confirm you have the minimum
+required data:
+
+```bash
+$ python -m unittest script.test_mapdata
+```
+
+This test is also run during the continuous integration to catch any errors.
 ### 2. Generate Posts
 
 The posts are generated automatically - we do this by way of a cron job (scheduled

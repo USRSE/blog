@@ -10,6 +10,9 @@
   tag: "vsoch"
   feed: https://vsoch.github.io/usrse-feed.xml
   url: https://vsoch.github.io/
+  coords: [37.424107, -122.166077]
+  image: https://vsoch.github.io/assets/images/avatar.png
+  institution: Stanford University Research Computing Center
 - name: "Daniel S. Katz's blog"
   tag: "dsk"
   feed: https://danielskatzblog.wordpress.com/category/RSE/feed/
