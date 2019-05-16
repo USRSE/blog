@@ -24,6 +24,15 @@ defaults:
             layout: post
             comments: true
 
+# Navigation
+navbar-links:
+  Home: ""
+  Community:
+    - About: "about"
+    - RSE Map: "map"
+  Posts:
+    - All Posts: "posts"
+    - Archive: "archive"
 
 # Build settings
 permalink   : /:year/:categories/:title/

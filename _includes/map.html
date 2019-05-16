@@ -1,0 +1,50 @@
+<script>
+
+// Store a list of rses, and groups to add to map
+var RSEs = Array()
+var groups = Array()
+
+// First add authors, optionally with image and institution
+{% for author in site.data.authors %}{% if author.coords %}
+var marker = L.marker([{{ author.coords[0] }}, {{ author.coords[1] }}]);
+marker.bindPopup("Research Software Engineer<br>{% if author.image %}<img src='{{ author.image }}' style='height:30px; float:right'>{% endif %}<a href='{{ author.url }}'>{{ author.name }}{% if author.institution %}<br>{{ author.institution }}{% endif %}</a>");
+RSEs.push(marker);{% endif %}{% endfor %}
+
+// Add them to a layer group
+var rseLayer = L.layerGroup(RSEs);
+
+// Next add groups, and RSEs without feeds
+{% for entry in site.data.map %}{% if entry.coords %}
+var marker = L.marker([{{ entry.coords[0] }}, {{ entry.coords[1] }}]);
+marker.bindPopup("RSE Group<br>{% if entry.image %}<img src='{{ entry.image }}' style='height:30px; float:right'>{% endif %}<a href='{{ entry.url }}'>{{ entry.name }}{% if entry.institution %}<br>{{ entry.institution }}{% endif %}</a>");
+groups.push(marker);{% endif %}{% endfor %}
+
+// Add them to a layer group
+var groupLayer = L.layerGroup(groups);
+
+// Add the layers to the map
+var map = L.map('map-container', {
+    center: [37.6, -95.665],
+    zoom: 4,
+    layers: [rseLayer, groupLayer]
+});
+
+// This is the base tile layer
+basemap = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+             attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+          }).addTo(map);
+
+// Create objects to name them
+var overlayMaps = {
+    "<span style='color: darkpurple'>RSEs</span>": rseLayer,
+    "<span style='color: darkblue'>RSE Groups</span>": groupLayer
+};
+
+var baseMaps = {
+    "<span style='color: green'>Streets</span>": basemap,
+};
+
+// Add the objects to layer controls
+L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+</script>
