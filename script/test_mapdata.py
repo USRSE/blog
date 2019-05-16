@@ -35,7 +35,7 @@ class TestMap(unittest.TestCase):
         with open(self.map, 'r') as stream:
             mapdata = yaml.safe_load(stream)
 
-        requireds = ['name', 'coords', 'url']
+        requireds = ['name', 'coords', 'url', 'type']
         for entry in mapdata:
 
             print("Testing %s" % entry)
@@ -46,6 +46,9 @@ class TestMap(unittest.TestCase):
             # Test that url is 200
             response = requests.head(entry['url'])
             self.assertTrue(response.status_code in [200, 300])
+ 
+            # Type must be group or person
+            self.assertTrue(entry['type'] in ['group', 'person'])
 
             # Image must exist
             if 'image' in entry:

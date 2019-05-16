@@ -9,9 +9,12 @@ permalink: /map/
 .page-heading {
     padding-bottom: 10px !important;
 }
+.container {
+   max-width: 1440px;
+}
 </style>
 
-Where are the RSEs that participate in this community blog on the map?
+<p style='text-align:center'>Where are the RSEs that participate in this community blog on the map?</p>
 
 <div id="map-container" style="height:800px"></div>
 
