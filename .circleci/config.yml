@@ -43,8 +43,8 @@ deploy: &deploy
     else
         echo "Detected trigger, updating GitHub pages!"
         git branch
-        git config user.name "${CIRCLE_USERNAME}"
-        git config user.email "${CIRCLE_USERNAME}@users.noreply.github.com"
+        git config user.name "${CIRCLECI_USERNAME}"
+        git config user.email "${CIRCLECI_USERNAME}@users.noreply.github.com"
         git checkout master
         git pull origin master
         git add ~/repo/_posts/*
@@ -75,13 +75,17 @@ generate_posts: &generate_posts
 
 build_jekyll: &build_jekyll
     name: Jekyll Build
-    command: |              
-        echo "Building RSE Blog for Preview"
-        cp ~/repo/.circleci/circle_urls.sh ~/repo/circle_urls.sh
-        cd ~/repo
-        chmod u+x circle_urls.sh
-        bash circle_urls.sh              
-        bundle exec jekyll build
+    command: |
+        if [ -z "$CIRCLECI_TRIGGER" ]; then
+            echo "Building RSE Blog for Preview"
+            cp ~/repo/.circleci/circle_urls.sh ~/repo/circle_urls.sh
+            cd ~/repo
+            chmod u+x circle_urls.sh
+            bash circle_urls.sh              
+            bundle exec jekyll build
+        else
+            echo "Nightly build detected, preview not needed."
+        fi
 
 jobs:
   build-site:
