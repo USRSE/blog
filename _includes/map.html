@@ -16,7 +16,7 @@ var rseLayer = L.layerGroup(RSEs);
 // Next add groups, and RSEs without feeds
 {% for entry in site.data.map %}{% if entry.coords %}
 var marker = L.marker([{{ entry.coords[0] }}, {{ entry.coords[1] }}]);
-marker.bindPopup("RSE Group<br>{% if entry.image %}<img src='{{ entry.image }}' style='height:30px; float:right'>{% endif %}<a href='{{ entry.url }}'>{{ entry.name }}{% if entry.institution %}<br>{{ entry.institution }}{% endif %}</a>");
+marker.bindPopup("{% if entry.type == 'group' %}RSE Group{% else %}Research Software Engineer{% endif %}<br>{% if entry.image %}<img src='{{ entry.image }}' style='height:30px; float:right'>{% endif %}<a href='{{ entry.url }}'>{{ entry.name }}{% if entry.institution %}<br>{{ entry.institution }}{% endif %}</a>");
 {% if entry.type == "group" %}groups.push(marker);{% else %}RSEs.push(marker);{% endif %}{% endif %}{% endfor %}
 
 // Add them to a layer group
