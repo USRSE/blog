@@ -6,9 +6,8 @@
   institution: Stanford University
   type: group
 - name: Georgia Institute of Technology
-  image: https://www.ece.gatech.edu/sites/all/themes/gt_ece/images/logos/gt-ece-logo.png
   url: https://www.ece.gatech.edu/
-  coords: [53.416519, -7.901980]
+  coords: [33.776033, -84.398841]
   type: group
 - name: Los Alamos National Laboratory
   image: https://upload.wikimedia.org/wikipedia/commons/2/24/Los_Alamos_logo.svg 
@@ -53,7 +52,7 @@
   type: group
 - name: National Center for Supercomputing Applications 
   url: https://ssa.ncsa.illinois.edu/
-  coords: [28.614920, 77.221730]
+  coords: [40.109982, -88.225143]
   institution: University of Illinois Urbana-Champaign
   type: group
 - name: Center for Research Computing
