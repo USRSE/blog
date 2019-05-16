@@ -31,19 +31,19 @@
 - name: Research Computing
   image: https://researchcomputing.princeton.edu/sites/researchcomputing2/files/tiger-2018cutout-turncatedface-final-4_0.jpg
   url: https://researchcomputing.princeton.edu
-  coords: [40.348240, -74.657980]
+  coords: [40.346196, -74.652702]
   institution: Princeton University
   type: group
 - name: Lewis-Siegler Institute for Integrative Genomics 
   image: https://lsi.princeton.edu/sites/lsi/themes/lsi_zen/logo.png 
   url: https://lsi.princeton.edu
-  coords: [28.553845, 77.274614]
+  coords: [40.344381, -74.653274]
   institution: Princeton University
   type: group
 - name: Center for Digital Humanites
   image: https://cdh.princeton.edu/static/img/CDH_logo.svg
   url: https://cdh.princeton.edu
-  coords: [40.348240, -74.657980]
+  coords: [40.349393, -74.657330]
   institution: Princeton University
   type: group
 - name: University of Alabama
