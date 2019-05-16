@@ -52,7 +52,7 @@ group or institution, add that too (not required):
 ...
   feed: http://myblog.com/feed.xml
   image: https://www.path.com/to/your/headshot.png
-  coord: [6.41010, 50.90680]
+  coords: [6.41010, 50.90680]
   institution: Stanford University Research Computing Center
 ```
 
