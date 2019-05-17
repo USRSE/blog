@@ -4,29 +4,48 @@
 var RSEs = Array()
 var groups = Array()
 
-// First add authors, optionally with image and institution
-{% for author in site.data.authors %}{% if author.coords %}
-var marker = L.marker([{{ author.coords[0] }}, {{ author.coords[1] }}]);
-marker.bindPopup("Research Software Engineer<br>{% if author.image %}<img src='{{ author.image }}' style='height:30px; float:right'>{% endif %}<a href='{{ author.url }}'>{{ author.name }}{% if author.institution %}<br>{{ author.institution }}{% endif %}</a>");
-RSEs.push(marker);{% endif %}{% endfor %}
+// We want custom color markers (individuals purple)
+var purpleIcon = new L.Icon({
+  iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
 
-// Add them to a layer group
-var rseLayer = L.layerGroup(RSEs);
+var blueIcon = new L.Icon({
+  iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
 
-// Next add groups, and RSEs without feeds
+
+// First add groups (so they are base layer on map)
 {% for entry in site.data.map %}{% if entry.coords %}
-var marker = L.marker([{{ entry.coords[0] }}, {{ entry.coords[1] }}]);
+{% if entry.type == "group" %}var marker = L.marker([{{ entry.coords[0] }}, {{ entry.coords[1] }}], {icon: blueIcon});{% else %}var marker = L.marker([{{ entry.coords[0] }}, {{ entry.coords[1] }}], {icon: purpleIcon});{% endif %}
 marker.bindPopup("{% if entry.type == 'group' %}RSE Group{% else %}Research Software Engineer{% endif %}<br>{% if entry.image %}<img src='{{ entry.image }}' style='height:30px; float:right'>{% endif %}<a href='{{ entry.url }}'>{{ entry.name }}{% if entry.institution %}<br>{{ entry.institution }}{% endif %}</a>");
 {% if entry.type == "group" %}groups.push(marker);{% else %}RSEs.push(marker);{% endif %}{% endif %}{% endfor %}
 
+// Then add authors, optionally with image and institution
+{% for author in site.data.authors %}{% if author.coords %}
+var marker = L.marker([{{ author.coords[0] }}, {{ author.coords[1] }}], {icon: purpleIcon});
+marker.bindPopup("Research Software Engineer<br>{% if author.image %}<img src='{{ author.image }}' style='height:30px; float:right'>{% endif %}<a href='{{ author.url }}'>{{ author.name }}{% if author.institution %}<br>{{ author.institution }}{% endif %}</a>");
+RSEs.push(marker);{% endif %}{% endfor %}
+
+
 // Add them to a layer group
 var groupLayer = L.layerGroup(groups);
+var rseLayer = L.layerGroup(RSEs);
 
 // Add the layers to the map
 var map = L.map('map-container', {
     center: [37.6, -95.665],
     zoom: 4,
-    layers: [rseLayer, groupLayer]
+    layers: [groupLayer, rseLayer]
 });
 
 // This is the base tile layer
@@ -36,8 +55,8 @@ basemap = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 
 // Create objects to name them
 var overlayMaps = {
-    "<span style='color: darkpurple'>RSEs</span>": rseLayer,
-    "<span style='color: darkblue'>RSE Groups</span>": groupLayer
+    "<span style='color: darkblue'>RSE Groups</span>": groupLayer,
+    "<span style='color: darkpurple'>RSEs</span>": rseLayer
 };
 
 var baseMaps = {
