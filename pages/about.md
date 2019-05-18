@@ -1,34 +1,13 @@
 ---
 layout: page
-title: About USRSE
-description: About the United States (US) Research Software Engineer Community
+title: About US-RSE Syndicated Blog
+description: About the United States (US) Research Software Engineer Community Syndicated Blog
 permalink: /about/
 ---
 
-The increasing use of digital technologies across research communities has gone hand
-in hand with a strong growth and reliance on software written or customized to solve
-research problems. This in turn is driving dialog around opportunities to
+The US-RSE community blog collects articles and blog posts from personal and group RSE sites associated with the [US-RSE](https://us-rse.org) organization.  By collecting and aggregating the posts we hope to provide a single resource highlighting the work, stories and experiences of RSEs throughout the community.  Topics range from posts outline new RSE-developed software releases, to opinion pieces on the state of research software, to community updates and news, and everything in between.  The content is all generated and published by the individuals and groups owning the blogs.  
 
-  * improve the development of, and
-  * incentivize useful sharing, curation, and ongoing maintenance of
-    research software artifacts and related knowledge.
+To join and have your blog feed part of the RSE see the [blog repo README](https://github.com/USRSE/blog) for criteria and instructions.  We welcome contributions from anyone who considers themselves to work in an RSE capacity or who publishes posts with applicable content.  See our definition of an RSE [here](https://us-rse.org/what-is-an-rse/).  
 
-Of course, research software does not develop, curate, or maintain itself. Accordingly,
-widespread research software growth has included emerging roles for people who
-create, maintain, and contribute to the research software ecosystem. These roles can
-bring value directly through enabling specific research projects. They
-also bring value indirectly, through helping ensure enduring impact of research
-software innovations and by facilitating adequate reproducibility standards in
-digital science.
-
-Positions like data steward, information manager, research data
-officer, research software engineer, research supporter, cyberinfrastructure
-engineer, campus champion, research computing facilitator, bioinformatician and
-other titles are increasingly found as core roles in research teams.
-
-Initiatives in the [UK](http://rse.ac.uk/), [Germany](http://www.de-rse.org/en), the
-[Netherlands](http://nl-rse.org) and elsewhere are bringing
-together the community of people writing and contributing to research software at
-the national and international level. In the US this encompasses
-universities, laboratories, knowledge institutes, companies and other
-enterprises. This site is part of that effort.
+Disclaimer:
+Blog feeds are curated nightly to collect new posts and archive old posts.  As a result, we cannot guarantee that anyone has reviewed any posts for content or applicability.  Opinions expressed within each post are those of the author(s) and do not necessarily reflect the opinions of the US-RSE.  Offensive or inappropriate posts should be reported to blog@us-rse.org or a pull request should be submitted to remove the offending feed. 
