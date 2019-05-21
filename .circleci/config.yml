@@ -33,12 +33,6 @@ install: &install
   command: |
      $HOME/conda/bin/pip install -r ~/repo/.circleci/requirements.txt
 
-test_map: &test_map
-  name: test the metadata required for map
-  command: |
-     $HOME/conda/bin/python -m unittest script.test_mapdata
-
-
 deploy: &deploy
   name: Deploy back to GitHub master, only in the case that CIRCLECI_TRIGGER is found
   command: |
@@ -123,7 +117,6 @@ jobs:
           key: rubygems-v1
           paths:
             - vendor/bundle
-      - run: *test_map
       - run: *generate_posts
       - run: *build_jekyll
       - store_artifacts:
