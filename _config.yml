@@ -29,7 +29,6 @@ navbar-links:
   Home: ""
   Community:
     - About: "about"
-    - RSE Map: "map"
   Posts:
     - All Posts: "posts"
     - Archive: "archive"
