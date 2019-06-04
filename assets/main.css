@@ -67,6 +67,13 @@ img::-moz-selection {
   color: #fff;
   background: transparent; }
 
+@media only screen and (min-width: 992px) {
+  #logo { z-index: 10;
+  position: absolute !important;
+  left: 1px !important;
+  top: 1px !important;}
+}
+
 #mainNav {
   position: absolute;
   border-bottom: 1px solid #e9ecef;
@@ -91,7 +98,9 @@ img::-moz-selection {
       border-bottom: 1px solid transparent;
       background: transparent; }
       #mainNav .navbar-brand {
-        padding: 10px 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 65px;
         color: #000; }
         #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
           color: #2196F3 }
@@ -121,8 +130,6 @@ img::-moz-selection {
         transition: transform 0.2s;
         border-bottom: 1px solid white;
         background-color: #e7e7e7; }
-        #mainNav.is-fixed .navbar-brand {
-          color: white; }
           #mainNav.is-fixed .navbar-brand:focus, #mainNav.is-fixed .navbar-brand:hover {
             color: #101c5d; }
         #mainNav.is-fixed .navbar-nav > li.nav-item > a {
