@@ -26,7 +26,9 @@ defaults:
 
 # Navigation
 navbar-links:
-  Home: ""
+  Home: 
+    - US-RSE Home: "https://us-rse.org"
+    - US-RSE Blog: ""
   Community:
     - About: "about"
   Posts:
