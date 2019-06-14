@@ -23,8 +23,17 @@ a {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s; }
-  a:focus, a:hover {
-    color: #0085A1; }
+  a button:focus, a button:hover {
+    color: white; }
+
+.fas:focus, .fas:hover {
+  color: #212529 !important;
+}
+
+.social-icon {
+   padding-left: 5px;
+   padding-right: 5px;
+}
 
 blockquote {
   font-style: italic;
@@ -34,6 +43,12 @@ blockquote {
   font-size: 36px;
   font-weight: 700;
   margin-top: 60px; }
+
+.jumbotron {
+  margin-top: -60px;
+  margin-bottom:100px;
+  background-color: whitesmoke;
+}
 
 .caption {
   font-size: 14px;
@@ -76,18 +91,20 @@ img::-moz-selection {
 
 #mainNav {
   position: absolute;
+  padding-top: 10px;
+  background-image: url("img/rse-transport-light.png") !important;
   border-bottom: 1px solid #e9ecef;
   background-color: #e7e7e7 !important;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   #mainNav .navbar-brand {
     font-weight: 800;
-    color: black; }
+    color: white; }
   #mainNav .navbar-toggler {
     font-size: 12px;
     font-weight: 800;
     padding: 13px;
     text-transform: uppercase;
-    color: black; }
+    color: white; }
   #mainNav .navbar-nav > li.nav-item > a {
     font-size: 12px;
     font-weight: 800;
@@ -101,14 +118,14 @@ img::-moz-selection {
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 65px;
-        color: #000; }
+        color: white; }
         #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-          color: #2196F3 }
+          color: #a3779d }
       #mainNav .navbar-nav > li.nav-item > a {
         padding: 10px 20px;
-        color: #000; }
+        color: white; }
         #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
-          color: #2196F3; } }
+          color: #a3779d; } }
   @media only screen and (min-width: 992px) {
     #mainNav {
       -webkit-transition: background-color 0.2s;
@@ -121,7 +138,7 @@ img::-moz-selection {
       -o-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
       -webkit-backface-visibility: hidden; }
-      #mainNav.is-fixed {
+      #mainNav.is-fixed {  
         /* when the user scrolls down, we hide the header right above the viewport */
         position: fixed;
         top: -67px;
@@ -136,6 +153,9 @@ img::-moz-selection {
           color: white; }
           #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus, #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
             color: #101c5d; }
+      /* Hide the logo when we scroll!*/
+      #mainNav.is-fixed #logo {
+          display: none; }  
       #mainNav.is-visible {
         /* if the user changes the scrolling direction, we show the header */
         -webkit-transform: translate3d(0, 100%, 0);
@@ -145,7 +165,6 @@ img::-moz-selection {
         transform: translate3d(0, 100%, 0); } }
 
 header.masthead {
-  margin-bottom: 50px;
   background: no-repeat center center;
   background-color: white;
   background-attachment: scroll;
@@ -219,7 +238,7 @@ header.masthead {
   color: #212529; }
   .post-preview > a:focus, .post-preview > a:hover {
     text-decoration: none;
-    color: #2196f3; }
+    color: #a3779d; }
   .post-preview > a > .post-title {
     font-size: 30px;
     margin-top: 30px;
@@ -237,7 +256,7 @@ header.masthead {
     color: #212529; }
     .post-preview > .post-meta > a:focus, .post-preview > .post-meta > a:hover {
       text-decoration: underline;
-      color: #2196f3; }
+      color: #a3779d; }
 @media only screen and (min-width: 768px) {
   .post-preview > a > .post-title {
     font-size: 36px; } }
@@ -316,13 +335,21 @@ footer {
   padding: 20px;
 }
 
+.dropdown > .btn {
+  color: white;
+}
+
+.navbar-nav > a > .btn {
+  color: white;
+}
+
 .btn-primary {
-  background-color: #0085A1;
-  border-color: #0085A1; }
+  background-color: #500e3d;
+  border-color: #500e3d; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
     color: #000;
-    background-color: #00657b !important;
-    border-color: #00657b !important; }
+    background-color: #951169 !important;
+    border-color: #951169 !important; }
 
 .btn-lg {
   font-size: 16px;

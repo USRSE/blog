@@ -7,14 +7,6 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <ul class="list-inline text-center">
-          <li class="list-inline-item">
-            <a href="https://us-rse.org/">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fas fa-home fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
           {% if site.twitter_username %}
           <li class="list-inline-item">
             <a href="https://www.twitter.com/{{ site.twitter_username }}">
@@ -46,7 +38,7 @@
           </li>
           {% endif %}
         </ul>
-        <p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}</p>
+        <p class="copyright text-muted">Copyright &copy; <a href="https://us-rse.org">{{ site.author }}</a> {{ 'now' | date: "%Y" }}</p>
       </div>
     </div>
   </div>
