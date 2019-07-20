@@ -77,17 +77,21 @@ img::-moz-selection {
 #mainNav {
   position: absolute;
   border-bottom: 1px solid #e9ecef;
-  background-color: #e7e7e7 !important;
+  background-image: url("img/rse-transport-light.png") !important;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  #mainNav .btn {
+    color: white;}
+  #mainNav .btn-default {
+    color: black;}
   #mainNav .navbar-brand {
     font-weight: 800;
-    color: black; }
+    color: white; }
   #mainNav .navbar-toggler {
     font-size: 12px;
     font-weight: 800;
     padding: 13px;
     text-transform: uppercase;
-    color: black; }
+    color: white; }
   #mainNav .navbar-nav > li.nav-item > a {
     font-size: 12px;
     font-weight: 800;
@@ -101,7 +105,7 @@ img::-moz-selection {
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 65px;
-        color: #000; }
+        color: #fff; }
         #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
           color: #2196F3 }
       #mainNav .navbar-nav > li.nav-item > a {
@@ -136,6 +140,9 @@ img::-moz-selection {
           color: white; }
           #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus, #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
             color: #101c5d; }
+      /* Hide the logo when we scroll!*/
+      #mainNav.is-fixed #logo {
+          display: none; }  
       #mainNav.is-visible {
         /* if the user changes the scrolling direction, we show the header */
         -webkit-transform: translate3d(0, 100%, 0);
