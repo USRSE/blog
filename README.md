@@ -27,7 +27,7 @@ parseable by [feedparser](https://pythonhosted.org/feedparser/) (most are).
 WordPress is a common blogging platform, and so we include notes here for how
 to find a feed for your wordpress blog. If you want to include all content,
 you can usually find a main feed at `https://<yourblog>/feed/`. However, it's
-recommended to create a [tag or category](https://wordpress.org/support/article/wordpress-feeds/#categories-and-tags) 
+recommended to create a [tag or category](https://wordpress.org/support/article/wordpress-feeds/#categories-and-tags)
 feed, in which case you could find the feed at `https://<yourblog>/category/<category>/feed/`. See the linked
 page for more ways that you can generate custom feeds based on tags and categories.
 Once you've added your feed, it's recommended to test generate posts to ensure
@@ -45,7 +45,7 @@ because typically feeds only provide the 10 (or a small number) of latest posts.
 If you look at the [.circleci/config.yml](.circleci/config.yml) you'll notice that
 this works by way of an environment variable, `CIRCLECI_TRIGGER`. This is added as
 a build context to the workflow that runs nightly, and indicates that a build
-and deploy is desired. Another important note is that the environment during the 
+and deploy is desired. Another important note is that the environment during the
 trigger is not the same as when triggered by a user (via pull request). For example,
 `CIRCLE_USERNAME`, which is normally set, is undefined for the nightly trigger.
 For this reason, we also define this in the context.
@@ -54,6 +54,12 @@ The reason this is set up to run with continuous integration is so that the site
 is regularly updated without human intervention. In the case that there is an error,
 the maintainers are notified. However, you can test this generation locally, without
 generating any files!
+
+First install python dependencies:
+
+```bash
+$ pip install -r .circleci/requirements.txt
+```
 
 ```bash
 $ python script/generate_posts.py _data/authors.yml --output _posts/ --test
@@ -86,7 +92,7 @@ You can also run the script to generate posts locally, if you choose.
 ```bash
 cd script
 
-python generate_posts.py 
+python generate_posts.py
 usage: generate_posts.py [-o OUTPUT] authors
 
 Authors Parser
@@ -118,5 +124,5 @@ index.html to parse. Please don't rename or change the location of this file.
 
 ## Credit
 
-The original template was from [bootstrap-clean-jekyll](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll) 
+The original template was from [bootstrap-clean-jekyll](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll)
 and has been simplified and updated for this case.
