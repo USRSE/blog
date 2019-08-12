@@ -19,4 +19,7 @@
   tag: "rsk"
   feed: https://rlskoeser.github.io/tags/rse/index.xml
   url: https://rlskoeser.github.io/
-
+- name: "Matthew Lincoln"
+  tag: "mdl"
+  feed: https://matthewlincoln.net/feeds/usrse.xml
+  url: https://matthewlincoln.net/
