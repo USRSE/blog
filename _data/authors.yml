@@ -23,3 +23,7 @@
   tag: "mdl"
   feed: https://matthewlincoln.net/feeds/usrse.xml
   url: https://matthewlincoln.net/
+- name: "Ian A. Cosden"
+  tag: "iac"
+  feed: https://cosden.github.io/rse-feed.xml
+  url: https://cosden.github.io/
