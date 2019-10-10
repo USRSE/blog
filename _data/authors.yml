@@ -27,3 +27,8 @@
   tag: "iac"
   feed: https://cosden.github.io/rse-feed.xml
   url: https://cosden.github.io/
+- name: "Northwestern IT Research Computing Services"
+  tag: "nuit_rcs"
+  feed: https://sites.northwestern.edu/researchcomputing/feed/?tag=rse
+  url: https://sites.northwestern.edu/researchcomputing/
+  
