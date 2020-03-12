@@ -1,4 +1,4 @@
-# U.S. Research Software Engineer Blog
+# U.S. Research Software Engineer Association Blog
 
 This is a syndicated blog to provide content for research software engineers
 across the United States. Here they can add an rss/xml feed to share stories
