@@ -31,4 +31,7 @@
   tag: "nuit_rcs"
   feed: https://sites.northwestern.edu/researchcomputing/feed/?tag=rse
   url: https://sites.northwestern.edu/researchcomputing/
-  
+- name: "Jonathan Dursi"
+  tag: "dursi"
+  feed: https://www.dursi.ca/feed.xml
+  url: https://www.dursi.ca
