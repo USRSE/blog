@@ -35,3 +35,7 @@
   tag: "dursi"
   feed: https://www.dursi.ca/feed.xml
   url: https://www.dursi.ca
+- name: "Deepak Ahire"
+  tag: "adeepak7"
+  feed: https://medium.com/feed/@ahiredeepak20
+  url: "www.deepakahire.live"
