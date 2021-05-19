@@ -49,7 +49,7 @@ These three metrics are likely correlated anyway.</p>
 <a href="https://vsoch.github.io/package-popularity/" target="_blank">Take a look yourself!</a>.</p>
 
 <div style="padding: 20px;">
-  <img src="https://raw.githubusercontent.com/vsoch/package-popularity/main/img/spackages.png" />
+  <img src="https://raw.githubusercontent.com/vsoch/package-popularity/main/commits/img/spackages.png" />
 </div>
 
 <p>You can see the repository <a href="https://github.com/vsoch/package-popularity">here for extraction details and data</a>. I’ll note that there was a large re-organization of package files in 2013,
