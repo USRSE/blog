@@ -1,7 +1,3 @@
-- name: "US Research Software Engineer Community"
-  tag: "usrse"
-  url: http://us-rse.org/
-  feed: http://us-rse.org/feed.xml
 - name: "US Research Software Sustainability Institute"
   tag: "urssi-us"
   feed: http://urssi.us/blog/index.xml
