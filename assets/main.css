@@ -74,29 +74,38 @@ img::-moz-selection {
   top: 1px !important;}
 }
 
+@media only screen and (max-width: 992px) {
+  #logo {display: none;}
+}
+
 #mainNav {
   position: absolute;
   border-bottom: 1px solid #e9ecef;
-  background-image: url("img/rse-transport-light.png") !important;
+  background-color: #741755 !important;
+  height: 50px;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   #mainNav .btn {
-    color: white;}
+    color: white;
+    font-weight: 400;
+    font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+  }
   #mainNav .btn-default {
     color: black;}
   #mainNav .navbar-brand {
-    font-weight: 800;
-    color: white; }
+    color: white; 
+    font-weight: 400;
+    font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+  }
   #mainNav .navbar-toggler {
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 800;
     padding: 13px;
-    text-transform: uppercase;
     color: white; }
   #mainNav .navbar-nav > li.nav-item > a {
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 800;
     letter-spacing: 1px;
-    text-transform: uppercase; }
+  }
   @media only screen and (min-width: 992px) {
     #mainNav {
       border-bottom: 1px solid transparent;
@@ -310,11 +319,10 @@ footer {
     text-align: center; }
 
 .btn {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 800;
   padding: 15px 25px;
   letter-spacing: 1px;
-  text-transform: uppercase;
   border-radius: 0;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
