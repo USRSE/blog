@@ -33,7 +33,7 @@ jobs:
         bundle exec jekyll build
 
     - name: Deploy
-      if: github.ref == 'refs/heads/main'
+      if: github.ref == 'refs/heads/master'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
@@ -52,5 +52,5 @@ jobs:
         else
            printf "Changes\n"
            git commit -a -m "Automated deployment to update community posts $(date '+%Y-%m-%d')"
-           git push origin main
+           git push origin master
         fi
