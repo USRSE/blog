@@ -4,18 +4,18 @@ workflows:
   version: 2
 
   # The build workflow will build a preview for the site, intended for PRs
-  build:
-    jobs:
-      - build-site:
-          filters:
-            branches:
-              ignore: master
+  ## build:
+  ##   jobs:
+  ##     - build-site:
+  ##         filters:
+  ##           branches:
+  ##             ignore: master
 
   # The build nightly has a content (below) that indicates deployment
   build-nightly:
     triggers:
       - schedule:
-          cron: "0 0 * * *"
+          cron: "0 0 27 11 *"
           filters:
             branches:
               only:
